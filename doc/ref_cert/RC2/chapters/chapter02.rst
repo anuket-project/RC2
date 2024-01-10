@@ -204,7 +204,7 @@ Network Testing
 The regexes load.balancer, LoadBalancer and
 Network.should.set.TCP.CLOSE_WAIT.timeout are currently skipped because
 they haven’t been covered successfully neither by
-`sig-release-1.25-blocking <https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/sig-release/release-branch-jobs/1.25.yaml>`__
+`sig-release-1.25-blocking <https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/sig-release/release-branch-jobs/1.26.yaml>`__
 nor by `Anuket RC2
 verification <https://build.opnfv.org/ci/view/functest-kubernetes/job/functest-kubernetes-v1.25-daily/11/>`__
 
