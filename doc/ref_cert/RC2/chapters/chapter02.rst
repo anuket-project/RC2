@@ -285,7 +285,7 @@ Storage Testing
 
 It should be noted that all in-tree driver testing, [Driver:+], is
 skipped. Conforming to `the upstream
-gate <https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/sig-release/release-branch-jobs/1.25.yaml>`__,
+gate <https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/sig-release/release-branch-jobs/1.26.yaml>`__,
 all PersistentVolumes NFS testing is also skipped. The following
 exclusions are about `the deprecated in-tree GitRepo volume
 type <https://github.com/kubernetes-sigs/kind/issues/2356>`__:
