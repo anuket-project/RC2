@@ -1,11 +1,11 @@
 # Anuket Reference Conformance (RC2) for RA2 based Implementations
 
 This repo contains the source for the
-[Reference Conformance (RC2) for RA2 based Implementations](https://cntt.readthedocs.io/projects/rc2/en/stable-orinoco/index.html).
+[Reference Conformance (RC2) for RA2 based Implementations](https://cntt.readthedocs.io/projects/rc2/en/latest/index.html).
 
 ## Issues
 
-Issues for this repo handled in the
+Issues for this repo are handled in the
 [anuket-project/anuket-specifications](https://github.com/anuket-project/anuket-specifications/issues) repository. 
 
 # Pull Requests
