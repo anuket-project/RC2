@@ -1,0 +1,30 @@
+name: "Pull Request Docs Check"
+on: 
+- pull_request
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v3
+    - name: Install prerequisites
+      run: | 
+        sudo apt-get --allow-releaseinfo-change update -y && sudo apt-get install -y tox
+    - name: Building RC2
+      run: |
+        cd doc/ref_cert/RC2
+        echo "---------------------------------------------------------------------------------------"
+        echo "---------------------------------- Building RC2 ---------------------------------------"
+        echo "---------------------------------------------------------------------------------------"
+        tox -e docs
+        echo "Building RC2 was successful! "
+    - name: Store html build result
+      uses: actions/upload-artifact@v3
+      with:
+          name: rc2-html
+          path: |
+           doc/ref_cert/RC2/build
+
+
+        

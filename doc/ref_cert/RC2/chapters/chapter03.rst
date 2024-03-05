@@ -12,7 +12,7 @@ description file will be proposed in a shared tree.
 `Xtesting CI <https://galaxy.ansible.com/collivier/xtesting>`__ only
 requires internet access, GNU/Linux as Operating System and asks for a
 few dependencies as described in `Deploy your own Xtesting CI/CD
-toolchains <https://github.com/collivier/ansible-role-xtesting#readme>`__:
+toolchains <https://github.com/collivier/ansible-role-xtesting>`__:
 
 -  python-virtualenv
 -  git
