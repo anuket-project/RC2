@@ -12,7 +12,6 @@ extensions = [
 html_theme = "piccolo_theme"
 linkcheck_ignore = [
     'http://127.0.0.1',
-    'https://build.opnfv.org/',
     'https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#'
 ]
 intersphinx_mapping = {
