@@ -88,76 +88,76 @@ for Kubernetes workloads.
    * - ra2.app.011
      - Published helm chart:  Helm charts of the CNF must be published into a
        helm registry and must not be used from local copies.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#test-if-the-helm-chart-is-published-helm_chart_published>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#test-if-the-helm-chart-is-published-helm_chart_published>`__
      - Should
    * - ra2.app.012
      - Valid Helm chart:  Helm charts of the CNF must be valid and should pass
        the helm lint validation.
      - `CNCF CNF Testsuite
-       <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#test-if-the-helm-chart-is-valid-helm_chart_valid>`__
+       <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#test-if-the-helm-chart-is-valid-helm_chart_valid>`__
      - Should
    * - ra2.app.013
      - Rolling update: Rolling update of the CNF must be possible using
        Kubernetes deployments.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-test-if-the-cnf-can-perform-a-rolling-update-rolling_update>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-test-if-the-cnf-can-perform-a-rolling-update-rolling_update>`__
      - Must
    * - ra2.app.014
      - Rolling downgrade: Rolling downgrade of the CNF must be possible using
        Kubernetes deployments.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-check-if-a-cnf-version-can-be-downgraded-through-a-rolling_downgrade-rolling_downgrade>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-check-if-a-cnf-version-can-be-downgraded-through-a-rolling_downgrade-rolling_downgrade>`__
      - Must
    * - ra2.app.015
      - CNI compatibility: The CNF must use CNI compatible networking plugins.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-check-if-the-cnf-is-compatible-with-different-cnis-cni_compatibility>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-check-if-the-cnf-is-compatible-with-different-cnis-cni_compatibility>`__
      - Must
    * - ra2.app.016
      - Kubernetes API stability: The CNF must not use any Kubernetes alpha
        API-s.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#poc-to-check-if-a-cnf-uses-kubernetes-alpha-apis-alpha_k8s_apis-alpha_k8s_apis>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#poc-to-check-if-a-cnf-uses-kubernetes-alpha-apis-alpha_k8s_apis-alpha_k8s_apis>`__
      - Must (Not)
    * - ra2.app.017
      - CNF resiliency (node drain): CNF must not loose data, must continue to
        run and its readiness probe outcome must be Success even in case of a
        node drain and rescheduling occurs.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#test-if-the-cnf-crashes-when-no
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#test-if-the-cnf-crashes-when-no
        de-drain-occurs-node_drain>`__
      - Must (Not)
    * - ra2.app.018
      - CNF resiliency (network latency): CNF must not loose data, must
        continue to run and its readiness probe outcome must be Success even
        in case of network latency up to 2000 ms occurs.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#test-if-the-cnf-crashes-when-network-latency-occurs-pod_network_latency>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#test-if-the-cnf-crashes-when-network-latency-occurs-pod_network_latency>`__
      - Must (Not)
    * - ra2.app.019
      - CNF resiliency (pod delete) CNF must not loose data, must continue to
        run and its readiness probe outcome must be Success even in case of pod
        delete occurs.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#test-if-the-cnf-crashes-when-disk-fill-occurs-disk_fill>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#test-if-the-cnf-crashes-when-disk-fill-occurs-disk_fill>`__
      - Must (not)
    * - ra2.app.020
      - CNF resiliency (pod memory hog): CNF must not loose data, must continue
        to run and its readiness probe outcome must be Success even in case of
        pod memory hog occurs.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#test-if-the-cnf-crashes-when-pod-memory-hog-occurs-pod_memory_hog>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#test-if-the-cnf-crashes-when-pod-memory-hog-occurs-pod_memory_hog>`__
      - Must (Not)
    * - ra2.app.021
      - CNF resiliency (pod I/O stress): CNF must not loose data, must continue
        to run and its readiness probe outcome must be Success even in case of
        pod I/O stress occurs.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#test-if-the-cnf-crashes-when-pod-io-stress-occurs-pod_io_stress>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#test-if-the-cnf-crashes-when-pod-io-stress-occurs-pod_io_stress>`__
      - Must (Not)
    * - ra2.app.022
      - CNF resiliency (pod network corruption): CNF must not loose data, must
        continue to run and its readiness probe outcome must be Success even in
        case of pod network corruption occurs.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#test-if-the-cnf-crashes-when-po
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#test-if-the-cnf-crashes-when-po
        d-network-corruption-occurs-pod_network_corruptio  n>`__
      - Must (Not)
    * - ra2.app.023
      - CNF resiliency (pod network duplication):  CNF must not loose data,
        must continue to run and its readiness probe outcome must be Success
        even in case of pod network duplication occurs.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#test-if-the-cnf-crashes-when-pod-network-duplication-occurs-pod_network_duplication>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#test-if-the-cnf-crashes-when-pod-network-duplication-occurs-pod_network_duplication>`__
      - Must (Not)
    * - ra2.app.024
      - CNF resiliency (pod DNS error): CNF must not lose data, must continue
@@ -167,16 +167,16 @@ for Kubernetes workloads.
      - Must (Not)
    * - ra2.app.025
      - CNF local storage: CNF must not use local storage.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-test-if-the-cnf-uses-local-s
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-test-if-the-cnf-uses-local-s
        torage-no_local_volume_configuration>`__
      - Must (Not)
    * - ra2.app.026
      - Liveness probe: All Pods of the CNF must have livenessProbe defined.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-test-if-there-is-a-liveness-entry-in-the-helm-chart-liveness>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-test-if-there-is-a-liveness-entry-in-the-helm-chart-liveness>`__
      - Must
    * - ra2.app.027
      - Readiness probe: All Pods of the CNF must have readinessProbe defined.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-test-if-there-is-a-readiness-entry-in-the-helm-chart-readiness>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-test-if-there-is-a-readiness-entry-in-the-helm-chart-readiness>`__
      - Must
    * - ra2.app.028
      - No access to container daemon sockets: The CNF must not have any of the
@@ -189,30 +189,30 @@ for Kubernetes workloads.
        must not be automatically mapped. To prevent this the
        automountServiceAccountToken: false flag must be set in all Pods of the
        CNF.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-check-if-there-are-service-accounts-that-are-automatically-mapped-application_credentials>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-check-if-there-are-service-accounts-that-are-automatically-mapped-application_credentials>`__
      - Must (Not)
    * - ra2.app.030
      - No host network access: Host network must not be attached to any of the
        Pods of the CNF. hostNetwork attribute of the Pod specifications
        must be False or should not be specified.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-check-if-there-is-a-host-network-attached-to-a-pod-host_network>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-check-if-there-is-a-host-network-attached-to-a-pod-host_network>`__
      - Must (Not)
    * - ra2.app.031
      - Host process namespace separation: Pods of the CNF must not share the
        host process ID namespace or the host IPC namespace. Pod manifests must
        not have the hostPID or the hostIPC attribute set to true.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-check-if-containers-are-running-with-hostpid-or-hostipc-privileges-host_pid_ipc_privileges>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-check-if-containers-are-running-with-hostpid-or-hostipc-privileges-host_pid_ipc_privileges>`__
      - Must (Not)
    * - ra2.app.032
      - Resource limits: All containers and namespaces of the CNF must have
        defined resource limits for at least CPU and memory resources.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-check-if-containers-have-resource-limits-defined-resource_policies>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-check-if-containers-have-resource-limits-defined-resource_policies>`__
      - Must
    * - ra2.app.033
      - Read only filesystem: All containers of the CNF must have a read only
        filesystem. The readOnlyRootFilesystem attribute of the Pods in
        the their securityContext should be set to true.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-check-if-containers-have-immutable-file-systems-immutable_file_systems>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-check-if-containers-have-immutable-file-systems-immutable_file_systems>`__
      - Must
    * - ra2.app.034
      - Container image tags: All referred container images in the Pod
@@ -223,7 +223,7 @@ for Kubernetes workloads.
    * - ra2.app.035
      - No hardcoded IP addresses: The CNF must not have any hardcoded IP
        addresses in its Pod specifications.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-test-if-there-are-any-non-declarative-hardcoded-ip-addresses-or-subnet-masks-in-the-k8s-runtime-configuration>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-test-if-there-are-any-non-declarative-hardcoded-ip-addresses-or-subnet-masks-in-the-k8s-runtime-configuration>`__
      - Must (Not)
    * - ra2.app.036
      - No node ports: Service declarations of the CNF must not contain
@@ -244,32 +244,32 @@ for Kubernetes workloads.
    * - ra2.app.039
      - CNF image size: The different container images of the CNF should not be
        bigger than 5GB.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-check-if-the-cnf-has-a-reasonable-image-size-reasonable_image_size>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-check-if-the-cnf-has-a-reasonable-image-size-reasonable_image_size>`__
      - Should (Not)
    * - ra2.app.040
      - CNF startup time: Startup time of the Pods of a CNF should not be more
        than 60s where startup time is the time between starting the
        Pod until the readiness probe outcome is Success.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-check-if-the-cnf-have-a-reasonable-startup-time-reasonable_startup_time>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-check-if-the-cnf-have-a-reasonable-startup-time-reasonable_startup_time>`__
      - Should (Not)
    * - ra2.app.041
      - Pods of the CNF must not run in privileged mode.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-check-if-there-are-any-privileged-containers-kubscape-version-privileged_containers>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-check-if-there-are-any-privileged-containers-kubscape-version-privileged_containers>`__
      - Must (Not)
    * - ra2.app.042
      - No root user: None of the Pods of the CNF should run as a root user.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-check-if-any-containers-are-running-as-a-root-user-checks-the-user-outside-the-container-that-is-running-dockerd-non_root_user>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-check-if-any-containers-are-running-as-a-root-user-checks-the-user-outside-the-container-that-is-running-dockerd-non_root_user>`__
      - Should (Not)
    * - ra2.app.043
      - No privilege escalation: None of the containers of the CNF should allow
        privilege escalation.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-check-if-there-are-any-privi
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-check-if-there-are-any-privi
        leged-containers-kubscape-version-privileged_containers>`__
      - Should (Not)
    * - ra2.app.044
      - All the Pods of the CNF must be able to execute with a non-root user having a non-root group. Both the
        runAsUser and the runAsGroup attributes must be set to a value greater than 999.
-     - `CNCF CNF Testsuite <https://github.com/cncf/cnf-testsuite/blob/main/RATIONALE.md#to-check-if-containers-are-running-with-non-root-user-with-non-root-membership-non_root_containers>`__
+     - `CNCF CNF Testsuite <https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#to-check-if-containers-are-running-with-non-root-user-with-non-root-membership-non_root_containers>`__
      - Must
    * - ra2.app.045
      - Labels: Pods of the CNF should define at least the following labels:
