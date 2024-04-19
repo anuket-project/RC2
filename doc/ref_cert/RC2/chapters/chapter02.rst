@@ -418,7 +418,7 @@ v1.29 (latest stable release) selected by Anuket:
    * - Functest
      - v1.29
    * - xrally-kubernetes
-     - 1.1.1.dev12
+     - 1.1.1.dev14+g2ffa85a
 
 Dataplane benchmarking
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -429,7 +429,7 @@ Kubernetes-related performance test related tools especially
 `netperf <https://github.com/kubernetes/perf-tests/tree/master/network/benchmarks/netperf>`__
 which benchmarks Kubernetes networking performance.
 
-As listed in `netperf’s
+As listed in `netperf's
 README <https://github.com/kubernetes/perf-tests/tree/master/network/benchmarks/netperf>`__,
 the 5 major network traffic paths are combination of pod IP vs virtual
 IP and whether the pods are co-located on the same node versus a
@@ -516,7 +516,7 @@ v1.29 (latest stable release) selected by Anuket:
    * - kube-hunter
      - 0.6.8
    * - kube-bench
-     - v0.6.9
+     - v0.6.10
 
 Opensource CNF onboarding and testing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
