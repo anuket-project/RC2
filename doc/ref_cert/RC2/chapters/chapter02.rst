@@ -87,7 +87,7 @@ Testing <https://github.com/kubernetes/community/blob/master/contributors/devel/
 -  Disruptive
 -  Flaky
 
-It’s worth mentioning that no alpha or Flaky test can be included in
+It's worth mentioning that no alpha or Flaky test can be included in
 Conformance as per the rules.
 
 Conformance
@@ -119,6 +119,7 @@ skip:
 -  [Feature:CrossNamespacePodAffinity]
 -  [Feature:CustomResourceValidationExpressions]
 -  [Feature:StorageVersionAPI]
+-  [Feature:WatchList]
 
 See `API Machinery Special Interest
 Group <https://github.com/kubernetes/community/tree/master/sig-api-machinery>`__
@@ -156,6 +157,7 @@ skip:
 -  [Disruptive]
 -  [Flaky]
 -  [Feature:BoundServiceAccountTokenVolume]
+-  [Feature:ClusterTrustBundle]
 -  [Feature:PodSecurityPolicy]
 
 See `Auth Special Interest
@@ -231,6 +233,7 @@ skip:
 -  [Feature:ProxyTerminatingEndpoints]
 -  [Feature:SCTP]
 -  [Feature:SCTPConnectivity]
+-  [Feature:ServiceCIDRs]
 -  DNS configMap nameserver
 -  load.balancer
 -  LoadBalancer
@@ -250,11 +253,18 @@ skip:
 -  [alpha]
 -  [Disruptive]
 -  [Flaky]
+-  [Feature:DynamicResourceAllocation]
 -  [Feature:ExperimentalResourceUsageTracking]
 -  [Feature:GRPCContainerProbe]
 -  [Feature:GPUUpgrade]
+-  [Feature:InPlacePodVerticalScaling]
+-  [Feature:KubeletCredentialProviders]
+-  [Feature:NodeLogQuery]
 -  [Feature:PodGarbageCollector]
+-  [Feature:PodLifecycleSleepAction]
 -  [Feature:RegularResourceUsageTracking]
+-  [Feature:SidecarContainers]
+-  [Feature:UserNamespacesSupport]
 -  [Feature:UserNamespacesStatelessPodsSupport]
 -  [NodeFeature:DownwardAPIHugePages]
 -  [NodeFeature:RuntimeHandler]
@@ -309,6 +319,8 @@ skip:
 -  [Feature:GKELocalSSD]
 -  [Feature:VolumeSnapshotDataSource]
 -  [Feature:Flexvolumes]
+-  [Feature:RecoverVolumeExpansionFailure]
+-  [Feature:SELinux]
 -  [Feature:vsphere]
 -  [Feature:Volumes]
 -  [Feature:Windows]
