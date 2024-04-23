@@ -15,7 +15,7 @@ linkcheck_ignore = [
     'https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#'
 ]
 intersphinx_mapping = {
-    'ref_arch_kubernetes': ('https://cntt.readthedocs.io/projects/ra2/en/latest/', None)
+    'ref_arch_kubernetes': ('https://cntt.readthedocs.io/projects/ra2/en/stable-pieman/', None)
 }
 autosectionlabel_prefix_document = True
 autosectionlabel_maxdepth = 4
