@@ -82,7 +82,7 @@ End-to-End Testing :cite:p:`rc2-kubernetes-e2e-tests`:
 -  Disruptive
 -  Flaky
 
-It’s worth mentioning that no alpha or Flaky test can be included in
+It's worth mentioning that no alpha or Flaky test can be included in
 Conformance as per the rules.
 
 Conformance
@@ -113,6 +113,7 @@ skip:
 -  [Feature:CrossNamespacePodAffinity]
 -  [Feature:CustomResourceValidationExpressions]
 -  [Feature:StorageVersionAPI]
+-  [Feature:WatchList]
 
 See :cite:t:`rc2-k8s-api-sig-api-machinery` and Chapter 6 of :cite:t:`rc2-ra2`
 for more details.
@@ -148,6 +149,7 @@ skip:
 -  [Disruptive]
 -  [Flaky]
 -  [Feature:BoundServiceAccountTokenVolume]
+-  [Feature:ClusterTrustBundle]
 -  [Feature:PodSecurityPolicy]
 
 See :cite:t:`rc2-k8s-api-sig-auth` and Chapter 6 of :cite:t:`rc2-ra2` for more
@@ -192,10 +194,10 @@ Network Testing
 
 The regexes load.balancer, LoadBalancer and
 Network.should.set.TCP.CLOSE_WAIT.timeout are currently skipped because
-they haven’t been covered successfully neither by
-`sig-release-1.25-blocking <https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/sig-release/release-branch-jobs/1.26.yaml>`__
+they haven't been covered successfully neither by
+`sig-release-1.29-blocking <https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/sig-release/release-branch-jobs/1.29.yaml>`__
 nor by `Anuket RC2
-verification <https://build.opnfv.org/ci/view/functest-kubernetes/job/functest-kubernetes-v1.25-daily/11/>`__
+verification <http://104.154.71.112:8080/job/functest-kubernetes-v1.29-daily>`__
 
 Please note that a couple of tests must be skipped by name below as they
 are no appropriate labels.
@@ -220,6 +222,7 @@ skip:
 -  [Feature:ProxyTerminatingEndpoints]
 -  [Feature:SCTP]
 -  [Feature:SCTPConnectivity]
+-  [Feature:ServiceCIDRs]
 -  DNS configMap nameserver
 -  load.balancer
 -  LoadBalancer
@@ -239,11 +242,18 @@ skip:
 -  [alpha]
 -  [Disruptive]
 -  [Flaky]
+-  [Feature:DynamicResourceAllocation]
 -  [Feature:ExperimentalResourceUsageTracking]
 -  [Feature:GRPCContainerProbe]
 -  [Feature:GPUUpgrade]
+-  [Feature:InPlacePodVerticalScaling]
+-  [Feature:KubeletCredentialProviders]
+-  [Feature:NodeLogQuery]
 -  [Feature:PodGarbageCollector]
+-  [Feature:PodLifecycleSleepAction]
 -  [Feature:RegularResourceUsageTracking]
+-  [Feature:SidecarContainers]
+-  [Feature:UserNamespacesSupport]
 -  [Feature:UserNamespacesStatelessPodsSupport]
 -  [NodeFeature:DownwardAPIHugePages]
 -  [NodeFeature:RuntimeHandler]
@@ -274,7 +284,7 @@ Storage Testing
 
 It should be noted that all in-tree driver testing, [Driver:+], is
 skipped. Conforming to `the upstream
-gate <https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/sig-release/release-branch-jobs/1.26.yaml>`__,
+gate <https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/sig-release/release-branch-jobs/1.29.yaml>`__,
 all PersistentVolumes NFS testing is also skipped. The following
 exclusions are about `the deprecated in-tree GitRepo volume
 type <https://github.com/kubernetes-sigs/kind/issues/2356>`__:
@@ -298,6 +308,8 @@ skip:
 -  [Feature:GKELocalSSD]
 -  [Feature:VolumeSnapshotDataSource]
 -  [Feature:Flexvolumes]
+-  [Feature:RecoverVolumeExpansionFailure]
+-  [Feature:SELinux]
 -  [Feature:vsphere]
 -  [Feature:Volumes]
 -  [Feature:Windows]
@@ -317,9 +329,9 @@ Kubernetes API benchmarking
 that performs Kubernetes API benchmarking.
 
 `Functest Kubernetes
-Benchmarking <https://git.opnfv.org/functest-kubernetes/tree/docker/benchmarking/testcases.yaml?h=stable%2Fv1.25>`__
+Benchmarking <https://git.opnfv.org/functest-kubernetes/tree/docker/benchmarking/testcases.yaml?h=stable%2Fv1.29>`__
 proposed a Rally-based test case,
-`xrally_kubernetes_full <https://artifacts.opnfv.org/functest-kubernetes/H9DF0X9T6DHH/functest-kubernetes-opnfv-functest-kubernetes-benchmarking-v1.25-xrally_kubernetes_full-run-2/xrally_kubernetes_full/xrally_kubernetes_full.html>`__,
+`xrally_kubernetes_full <https://artifacts.opnfv.org/functest-kubernetes/671YK0WH9PRK/functest-kubernetes-opnfv-functest-kubernetes-benchmarking-v1.29-xrally_kubernetes_full-run-9/xrally_kubernetes_full/xrally_kubernetes_full.html>`__,
 which iterates 10 times the mainline
 `xrally-kubernetes <https://github.com/xrally/xrally-kubernetes>`__
 scenarios.
@@ -327,10 +339,10 @@ scenarios.
 At the time of writing, no KPI is defined in :doc:`ref_arch_kubernetes:index`
 which would have asked for an update of the default SLA (maximum failure
 rate of 0%) proposed in `Functest Kubernetes
-Benchmarking <https://git.opnfv.org/functest-kubernetes/tree/docker/benchmarking/testcases.yaml?h=stable%2Fv1.25>`__
+Benchmarking <https://git.opnfv.org/functest-kubernetes/tree/docker/benchmarking/testcases.yaml?h=stable%2Fv1.29>`__
 
 `Functest
-xrally_kubernetes_full <hhttps://artifacts.opnfv.org/functest-kubernetes/H9DF0X9T6DHH/functest-kubernetes-opnfv-functest-kubernetes-benchmarking-v1.25-xrally_kubernetes_full-run-2/xrally_kubernetes_full/xrally_kubernetes_full.html>`__:
+xrally_kubernetes_full <https://artifacts.opnfv.org/functest-kubernetes/671YK0WH9PRK/functest-kubernetes-opnfv-functest-kubernetes-benchmarking-v1.29-xrally_kubernetes_full-run-9/xrally_kubernetes_full/xrally_kubernetes_full.html>`__:
 
 .. list-table:: Kubernetes API benchmarking
    :widths: 80 20
@@ -384,7 +396,7 @@ xrally_kubernetes_full <hhttps://artifacts.opnfv.org/functest-kubernetes/H9DF0X9
      - 10
 
 The following software versions are considered to benchmark Kubernetes
-v1.25 (latest stable release) selected by Anuket:
+v1.29 (latest stable release) selected by Anuket:
 
 .. list-table:: Software versions
    :widths: 50 50
@@ -393,9 +405,9 @@ v1.25 (latest stable release) selected by Anuket:
    * - Software
      - Version
    * - Functest
-     - v1.25
+     - v1.29
    * - xrally-kubernetes
-     - 1.1.1.dev12
+     - 1.1.1.dev14+g2ffa85a
 
 Dataplane benchmarking
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -406,7 +418,7 @@ Kubernetes-related performance test related tools especially
 `netperf <https://github.com/kubernetes/perf-tests/tree/master/network/benchmarks/netperf>`__
 which benchmarks Kubernetes networking performance.
 
-As listed in `netperf’s
+As listed in `netperf's
 README <https://github.com/kubernetes/perf-tests/tree/master/network/benchmarks/netperf>`__,
 the 5 major network traffic paths are combination of pod IP vs virtual
 IP and whether the pods are co-located on the same node versus a
@@ -426,14 +438,14 @@ modes) and `Netperf <https://github.com/HewlettPackard/netperf/>`__.
 At the time of writing, no KPI is defined in Anuket chapters which would
 have asked for an update of the default SLA proposed in `Functest
 Kubernetes
-Benchmarking <https://git.opnfv.org/functest-kubernetes/tree/docker/benchmarking?h=stable/v1.25>`__.
+Benchmarking <https://git.opnfv.org/functest-kubernetes/tree/docker/benchmarking?h=stable/v1.29>`__.
 
 Security testing
 ~~~~~~~~~~~~~~~~
 
 There are a couple of opensource tools that help securing the Kubernetes
 stack. Amongst them, `Functest Kubernetes
-Security <https://git.opnfv.org/functest-kubernetes/tree/docker/security/testcases.yaml?h=stable%2Fv1.25>`__
+Security <https://git.opnfv.org/functest-kubernetes/tree/docker/security/testcases.yaml?h=stable%2Fv1.29>`__
 offers two test cases based on
 `kube-hunter <https://github.com/aquasecurity/kube-hunter>`__ and
 `kube-bench <https://github.com/aquasecurity/kube-bench>`__.
@@ -477,10 +489,10 @@ rules are defined as mandatory (e.g., sec.std.001: The Cloud Operator
 it would have required an update of the default kube-bench behavior (all
 failures and warnings are only printed) as integrated in `Functest
 Kubernetes
-Security <https://git.opnfv.org/functest-kubernetes/tree/docker/security/testcases.yaml?h=stable%2Fv1.25>`__.
+Security <https://git.opnfv.org/functest-kubernetes/tree/docker/security/testcases.yaml?h=stable%2Fv1.29>`__.
 
 The following software versions are considered to verify Kubernetes
-v1.25 (latest stable release) selected by Anuket:
+v1.29 (latest stable release) selected by Anuket:
 
 .. list-table:: Software versions
    :widths: 50 50
@@ -489,11 +501,11 @@ v1.25 (latest stable release) selected by Anuket:
    * - Software
      - Version
    * - Functest
-     - v1.25
+     - v1.29
    * - kube-hunter
      - 0.6.8
    * - kube-bench
-     - v0.6.9
+     - v0.6.10
 
 Opensource CNF onboarding and testing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -509,7 +521,7 @@ upstream tests (see
 `clearwater-live-test <https://github.com/Metaswitch/clearwater-live-test>`__).
 
 The following software versions are considered to verify Kubernetes
-v1.25 (latest stable release) selected by Anuket:
+v1.29 (latest stable release) selected by Anuket:
 
 .. list-table:: Software versions
    :widths: 50 50
@@ -518,7 +530,7 @@ v1.25 (latest stable release) selected by Anuket:
    * - Software
      - Version
    * - Functest
-     - v1.25
+     - v1.29
    * - clearwater
      - release-130
    * - Helm
@@ -537,91 +549,91 @@ The following test case must pass as they are for Reference Conformance:
      - Test suite
      - Criteria
      - Requirements
-   * - opnfv/functest-kubernetes-smoke:v1.25
+   * - opnfv/functest-kubernetes-smoke:v1.29
      - xrally_kubernetes
      - PASS
      - Kubernetes API testing
-   * - opnfv/functest-kubernetes-smoke:v1.25
+   * - opnfv/functest-kubernetes-smoke:v1.29
      - k8s_conformance
      - PASS
      - Kubernetes API testing
-   * - opnfv/functest-kubernetes-smoke:v1.25
+   * - opnfv/functest-kubernetes-smoke:v1.29
      - k8s_conformance_serial
      - PASS
      - Kubernetes API testing
-   * - opnfv/functest-kubernetes-smoke:v1.25
+   * - opnfv/functest-kubernetes-smoke:v1.29
      - sig_api_machinery
      - PASS
      - Kubernetes API testing
-   * - opnfv/functest-kubernetes-smoke:v1.25
+   * - opnfv/functest-kubernetes-smoke:v1.29
      - sig_api_machinery_serial
      - PASS
      - Kubernetes API testing
-   * - opnfv/functest-kubernetes-smoke:v1.25
+   * - opnfv/functest-kubernetes-smoke:v1.29
      - sig_apps
      - PASS
      - Kubernetes API testing
-   * - opnfv/functest-kubernetes-smoke:v1.25
+   * - opnfv/functest-kubernetes-smoke:v1.29
      - sig_apps_serial
      - PASS
      - Kubernetes API testing
-   * - opnfv/functest-kubernetes-smoke:v1.25
+   * - opnfv/functest-kubernetes-smoke:v1.29
      - sig_auth
      - PASS
      - Kubernetes API testing
-   * - opnfv/functest-kubernetes-smoke:v1.25
+   * - opnfv/functest-kubernetes-smoke:v1.29
      - sig_cluster_lifecycle
      - PASS
      - Kubernetes API testing
-   * - opnfv/functest-kubernetes-smoke:v1.25
+   * - opnfv/functest-kubernetes-smoke:v1.29
      - sig_instrumentation
      - PASS
      - Kubernetes API testing
-   * - opnfv/functest-kubernetes-smoke:v1.25
+   * - opnfv/functest-kubernetes-smoke:v1.29
      - sig_network
      - PASS
      - Kubernetes API testing
-   * - opnfv/functest-kubernetes-smoke:v1.25
+   * - opnfv/functest-kubernetes-smoke:v1.29
      - sig_node
      - PASS
      - Kubernetes API testing
-   * - opnfv/functest-kubernetes-smoke:v1.25
+   * - opnfv/functest-kubernetes-smoke:v1.29
      - sig_scheduling_serial
      - PASS
      - Kubernetes API testing
-   * - opnfv/functest-kubernetes-smoke:v1.25
+   * - opnfv/functest-kubernetes-smoke:v1.29
      - sig_storage
      - PASS
      - Kubernetes API testing
-   * - opnfv/functest-kubernetes-smoke:v1.25
+   * - opnfv/functest-kubernetes-smoke:v1.29
      - sig_storage_serial
      - PASS
      - Kubernetes API testing
-   * - opnfv/functest-kubernetes-security:v1.25
+   * - opnfv/functest-kubernetes-security:v1.29
      - kube_hunter
      - PASS
      - Security testing
-   * - opnfv/functest-kubernetes-security:v1.25
+   * - opnfv/functest-kubernetes-security:v1.29
      - kube_bench_master
      - PASS
      - Security testing
-   * - opnfv/functest-kubernetes-security:v1.25
+   * - opnfv/functest-kubernetes-security:v1.29
      - kube_bench_node
      - PASS
      - Security testing
-   * - opnfv/functest-kubernetes-benchmarking:v1.25
+   * - opnfv/functest-kubernetes-benchmarking:v1.29
      - xrally_kubernetes_full
      - PASS
      - Kubernetes API benchmarking
-   * - opnfv/functest-kubernetes-benchmarking:v1.25
+   * - opnfv/functest-kubernetes-benchmarking:v1.29
      - netperf
      - PASS
      - Dataplane benchmarking
-   * - opnfv/functest-kubernetes-cnf:v1.25
+   * - opnfv/functest-kubernetes-cnf:v1.29
      - k8s_vims
      - PASS
      - Opensource CNF onboarding and testing
-   * - opnfv/functest-kubernetes-cnf:v1.25
+   * - opnfv/functest-kubernetes-cnf:v1.29
      - helm_vims
      - PASS
      - Opensource CNF onboarding and testing
