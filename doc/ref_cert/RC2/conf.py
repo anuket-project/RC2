@@ -13,6 +13,7 @@ extensions = [
 html_theme = "piccolo_theme"
 linkcheck_ignore = [
     'http://127.0.0.1',
+    'http://104.154.71.112',
     'https://github.com/cnti-testcatalog/testsuite/blob/main/RATIONALE.md#'
 ]
 intersphinx_mapping = {
@@ -41,5 +42,5 @@ html_theme_options = {
 html_logo = '_static/anuket-logo.png'
 html_favicon = '_static/favicon.ico'
 
-bibtex_bibfiles = ['refs.bib']
+bibtex_bibfiles = ['refs-rc2.bib']
 bibtex_default_style = 'unsrt'

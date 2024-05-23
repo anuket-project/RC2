@@ -9,10 +9,10 @@ and only runs the containers selected by Anuket RC2. It will be
 completed by the next Anuket mandatory test cases and then a new CI
 description file will be proposed in a shared tree.
 
-`Xtesting CI <https://galaxy.ansible.com/collivier/xtesting>`__ only
-requires internet access, GNU/Linux as Operating System and asks for a
-few dependencies as described in `Deploy your own Xtesting CI/CD
-toolchains <https://github.com/collivier/ansible-role-xtesting>`__:
+Xtesting CI :cite:p:`rc2-ansible-xtesting-ci` only requires internet access,
+GNU/Linux as Operating System and asks for a few dependencies as described in
+Deploy your own Xtesting CI/CD toolchains
+:cite:p:`rc2-ansible-role-xtesting-ci`:
 
 -  python-virtualenv
 -  git
@@ -24,7 +24,7 @@ and the network settings:
    virtualenv (“Aborting, target uses selinux but python bindings
    (libselinux-python) aren’t installed!”)
 -  Proxy: you may set your proxy in env for Ansible and in systemd for
-   Docker https://docs.docker.com/config/daemon/systemd/#httphttps-proxy
+   Docker :cite:p:`rc2-docker-proxy`
 
 To deploy your own CI toolchain running Anuket Compliance:
 

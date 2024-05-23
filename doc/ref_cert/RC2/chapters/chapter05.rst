@@ -4,13 +4,13 @@ The purpose of this chapter is to direct the reader to information regarding
 the test suites available and where to find the test suite code for workloads.
 
 The description of the tests can be found in the
-`CNCF CNF Testsuite Descriptions <https://github.com/cnti-testcatalog/testsuite/blob/main/docs/LIST_OF_TESTS.md>`__.
+CNTI CNF Testsuite Descriptions :cite:p:`rc2-cnti-testsuite-list-of-tests`.
 
-The installation of the CNCF test suite is described in the
-`CNCF CNF Testsuite Installation <https://github.com/cnti-testcatalog/testsuite/blob/main/INSTALL.md>`__.
+The installation of the CNCF test suite is described in the CNTI CNF Testsuite
+Installation :cite:p:`rc2-cnti-testsuite-install`.
 
-Some of the necessary tests are found in
-`Kubernetes documentation <https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/>`__.
+Some of the necessary tests are found in Kubernetes documentation
+:cite:p:`rc2-k8s-recommended-labels`.
 
 Functest
 ========

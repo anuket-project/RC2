@@ -195,9 +195,8 @@ Network Testing
 The regexes load.balancer, LoadBalancer and
 Network.should.set.TCP.CLOSE_WAIT.timeout are currently skipped because
 they haven't been covered successfully neither by
-`sig-release-1.29-blocking <https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/sig-release/release-branch-jobs/1.29.yaml>`__
-nor by `Anuket RC2
-verification <http://104.154.71.112:8080/job/functest-kubernetes-v1.29-daily>`__
+:cite:t:`rc2-sig-release-1.29-blocking` nor by Anuket RC2 Verification
+:cite:p:`rc2-functest-k8s-jobs-1.29`
 
 Please note that a couple of tests must be skipped by name below as they
 are no appropriate labels.
@@ -228,9 +227,7 @@ skip:
 -  LoadBalancer
 -  Network.should.set.TCP.CLOSE_WAIT.timeout
 
-See `Network Special Interest
-Group <https://github.com/kubernetes/community/tree/master/sig-network>`__
-and :doc:`ref_arch_kubernetes:chapters/chapter06`.
+See :cite:t:`rc2-k8s-api-sig-network` and Chapter 6 of :cite:t:`rc2-ra2`.
 
 Node Testing
 ^^^^^^^^^^^^
@@ -258,9 +255,7 @@ skip:
 -  [NodeFeature:DownwardAPIHugePages]
 -  [NodeFeature:RuntimeHandler]
 
-See `Node Special Interest
-Group <https://github.com/kubernetes/community/tree/master/sig-node>`__
-and :doc:`ref_arch_kubernetes:chapters/chapter06`.
+See :cite:t:`rc2-k8s-api-sig-node` and Chapter 6 of :cite:t:`rc2-ra2`.
 
 Scheduling Testing
 ^^^^^^^^^^^^^^^^^^
@@ -275,19 +270,16 @@ skip:
 -  [Feature:GPUDevicePlugin]
 -  [Feature:Recreate]
 
-See `Scheduling Special Interest
-Group <https://github.com/kubernetes/community/tree/master/sig-scheduling>`__
-and :doc:`ref_arch_kubernetes:chapters/chapter06`.
+See :cite:t:`rc2-k8s-api-sig-scheduling` and Chapter 6 of :cite:t:`rc2-ra2`.
 
 Storage Testing
 ^^^^^^^^^^^^^^^
 
 It should be noted that all in-tree driver testing, [Driver:+], is
-skipped. Conforming to `the upstream
-gate <https://github.com/kubernetes/test-infra/blob/master/config/jobs/kubernetes/sig-release/release-branch-jobs/1.29.yaml>`__,
-all PersistentVolumes NFS testing is also skipped. The following
-exclusions are about `the deprecated in-tree GitRepo volume
-type <https://github.com/kubernetes-sigs/kind/issues/2356>`__:
+skipped. Conforming to the upstream gate
+:cite:p:`rc2-sig-release-1.29-blocking`, all PersistentVolumes NFS testing is
+also skipped. The following exclusions are about the deprecated in-tree GitRepo
+volume type :cite:p:`rc2-k8s-kind-sig-issue-2356`:
 
 -  should provision storage with different parameters
 -  should not cause race condition when used for git_repo
@@ -318,31 +310,24 @@ skip:
 -  should provision storage with different parameters
 -  should not cause race condition when used for git_repo
 
-See `Storage Special Interest
-Group <https://github.com/kubernetes/community/tree/master/sig-storage>`__
-and :doc:`ref_arch_kubernetes:chapters/chapter06`.
+See :cite:t:`rc2-k8s-api-sig-storage` and Chapter 6 of :cite:t:`rc2-ra2`.
 
 Kubernetes API benchmarking
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Rally <https://github.com/openstack/rally>`__ is a tool and framework
-that performs Kubernetes API benchmarking.
+:cite:t:`rc2-openstack-rally` is a tool and framework that performs Kubernetes
+API benchmarking.
 
-`Functest Kubernetes
-Benchmarking <https://git.opnfv.org/functest-kubernetes/tree/docker/benchmarking/testcases.yaml?h=stable%2Fv1.29>`__
-proposed a Rally-based test case,
-`xrally_kubernetes_full <https://artifacts.opnfv.org/functest-kubernetes/671YK0WH9PRK/functest-kubernetes-opnfv-functest-kubernetes-benchmarking-v1.29-xrally_kubernetes_full-run-9/xrally_kubernetes_full/xrally_kubernetes_full.html>`__,
-which iterates 10 times the mainline
-`xrally-kubernetes <https://github.com/xrally/xrally-kubernetes>`__
-scenarios.
+Functest Kubernetes Benchmarking :cite:p:`rc2-functest-kubernetes-benchmarking`
+proposed a Rally-based test case, xrally_kubernetes_full
+:cite:p:`rc2-xrally-kubernetes-full`, which iterates 10 times the mainline
+:cite:p:`rc2-xrally-kubernetes` scenarios.
 
-At the time of writing, no KPI is defined in :doc:`ref_arch_kubernetes:index`
-which would have asked for an update of the default SLA (maximum failure
-rate of 0%) proposed in `Functest Kubernetes
-Benchmarking <https://git.opnfv.org/functest-kubernetes/tree/docker/benchmarking/testcases.yaml?h=stable%2Fv1.29>`__
+At the time of writing, no KPI is defined in :cite:t:`rc2-ra2` which would have
+asked for an update of the default SLA (maximum failure rate of 0%) proposed in
+Functest Kubernetes Benchmarking :cite:p:`rc2-functest-kubernetes-benchmarking`
 
-`Functest
-xrally_kubernetes_full <https://artifacts.opnfv.org/functest-kubernetes/671YK0WH9PRK/functest-kubernetes-opnfv-functest-kubernetes-benchmarking-v1.29-xrally_kubernetes_full-run-9/xrally_kubernetes_full/xrally_kubernetes_full.html>`__:
+Functest xrally_kubernetes_full :cite:p:`rc2-xrally-kubernetes-full`:
 
 .. list-table:: Kubernetes API benchmarking
    :widths: 80 20
@@ -412,17 +397,13 @@ v1.29 (latest stable release) selected by Anuket:
 Dataplane benchmarking
 ~~~~~~~~~~~~~~~~~~~~~~
 
-`Kubernetes perf-tests
-repository <https://github.com/kubernetes/perf-tests>`__ hosts various
-Kubernetes-related performance test related tools especially
-`netperf <https://github.com/kubernetes/perf-tests/tree/master/network/benchmarks/netperf>`__
-which benchmarks Kubernetes networking performance.
+Kubernetes perf-tests repository :cite:p:`rc2-k8s-perf-tests` hosts various
+Kubernetes-related performance test related tools especially netperf
+:cite:p:`rc2-k8s-netperf` which benchmarks Kubernetes networking performance.
 
-As listed in `netperf's
-README <https://github.com/kubernetes/perf-tests/tree/master/network/benchmarks/netperf>`__,
-the 5 major network traffic paths are combination of pod IP vs virtual
-IP and whether the pods are co-located on the same node versus a
-remotely located pod:
+As listed in netperf's README :cite:p:`rc2-k8s-netperf`, the 5 major network
+traffic paths are combination of pod IP vs virtual IP and whether the pods are
+co-located on the same node versus a remotely located pod:
 
 -  same node using pod IP
 -  same node using cluster/virtual IP
@@ -430,41 +411,33 @@ remotely located pod:
 -  remote node using cluster/virtual IP
 -  same node pod hairpin to itself using cluster/virtual IP
 
-It should be noted that
-`netperf <https://github.com/kubernetes/perf-tests/tree/master/network/benchmarks/netperf>`__
-leverages `iperf <https://github.com/esnet/iperf>`__ (both TCP and UDP
-modes) and `Netperf <https://github.com/HewlettPackard/netperf/>`__.
+It should be noted that netperf :cite:p:`rc2-k8s-netperf` leverages iperf
+:cite:p:`rc2-iperf` (both TCP and UDP modes) and Netperf :cite:p:`rc2-netperf`.
 
 At the time of writing, no KPI is defined in Anuket chapters which would
-have asked for an update of the default SLA proposed in `Functest
-Kubernetes
-Benchmarking <https://git.opnfv.org/functest-kubernetes/tree/docker/benchmarking?h=stable/v1.29>`__.
+have asked for an update of the default SLA proposed in Functest Kubernetes
+Benchmarking :cite:p:`rc2-functest-kubernetes-benchmarking`.
 
 Security testing
 ~~~~~~~~~~~~~~~~
 
 There are a couple of opensource tools that help securing the Kubernetes
-stack. Amongst them, `Functest Kubernetes
-Security <https://git.opnfv.org/functest-kubernetes/tree/docker/security/testcases.yaml?h=stable%2Fv1.29>`__
-offers two test cases based on
-`kube-hunter <https://github.com/aquasecurity/kube-hunter>`__ and
-`kube-bench <https://github.com/aquasecurity/kube-bench>`__.
+stack. Amongst them, Functest Kubernetes Security
+:cite:p:`rc2-functest-kubernetes-security` offers two test cases based on
+kube-hunter :cite:p:`rc2-kube-hunter` and kube-bench :cite:p:`rc2-kube-bench`.
 
-`kube-hunter <https://github.com/aquasecurity/kube-hunter>`__ hunts for
-security weaknesses in Kubernetes clusters and
-`kube-bench <https://github.com/aquasecurity/kube-bench>`__ checks
-whether Kubernetes is deployed securely by running the checks documented
-in the `CIS Kubernetes
-Benchmark <https://www.cisecurity.org/benchmark/kubernetes/>`__.
+kube-hunter :cite:p:`rc2-kube-hunter` hunts for security weaknesses in
+Kubernetes clusters and kube-bench :cite:p:`rc2-kube-bench` checks whether
+Kubernetes is deployed securely by running the checks documented in the
+CIS Kubernetes Benchmark :cite:p:`rc2-cis-kubernetes-benchmark`.
 
-`kube-hunter <https://github.com/aquasecurity/kube-hunter>`__ classifies
-all vulnerabilities as low, medium, and high. In context of this
-conformance suite, all vulnerabilities are only printed for information.
+kube-hunter :cite:p:`rc2-kube-hunter` classifies all vulnerabilities as low,
+medium, and high. In context of this conformance suite, all vulnerabilities are
+only printed for information.
 
-Here are the `vulnerability
-categories <https://github.com/aquasecurity/kube-hunter/blob/v0.6.8/kube_hunter/core/events/types.py>`__
-tagged as high by
-`kube-hunter <https://github.com/aquasecurity/kube-hunter>`__:
+Here are the vulnerability categories
+:cite:p:`rc2-kube-hunter-vulnerability-categories` tagged as high by
+kube-hunter :cite:p:`rc2-kube-hunter`:
 
 - ExposedSensitiveInterfacesTechnique
 - MountServicePrincipalTechnique
@@ -487,9 +460,8 @@ At the time of writing, none of the Center for Internet Security (CIS)
 rules are defined as mandatory (e.g., sec.std.001: The Cloud Operator
 **should** comply with Center for Internet Security CIS Controls) else
 it would have required an update of the default kube-bench behavior (all
-failures and warnings are only printed) as integrated in `Functest
-Kubernetes
-Security <https://git.opnfv.org/functest-kubernetes/tree/docker/security/testcases.yaml?h=stable%2Fv1.29>`__.
+failures and warnings are only printed) as integrated in Functest Kubernetes
+Security :cite:p:`rc2-functest-kubernetes-security`.
 
 The following software versions are considered to verify Kubernetes
 v1.29 (latest stable release) selected by Anuket:
@@ -515,10 +487,9 @@ technical solution to ensure that the platforms meet Network Functions
 Virtualization requirements.
 
 Functest CNF offers 2 test cases which automatically onboard and test
-`Clearwater IMS <https://github.com/Metaswitch/clearwater-docker>`__ via
-kubectl and Helm. It’s worth mentioning that this CNF is covered by the
-upstream tests (see
-`clearwater-live-test <https://github.com/Metaswitch/clearwater-live-test>`__).
+Clearwater IMS :cite:p:`rc2-clearwater-ims` via kubectl and Helm. It’s worth
+mentioning that this CNF is covered by the upstream tests (see
+clearwater-live-test :cite:p:`rc2-clearwater-live-test`).
 
 The following software versions are considered to verify Kubernetes
 v1.29 (latest stable release) selected by Anuket:
