@@ -190,3 +190,10 @@ infrastructure.
 Similarly, Chapter 4 maps test cases map to requirements for CNFs and
 Chapter 5 builds a testing cookbook. Chapter 6 encompasses any gaps in
 the Reference Conformance 2.
+
+References
+----------
+
+.. bibliography::
+   :cited:
+

@@ -7,7 +7,8 @@ exclude_patterns = [
 ]
 extensions = [
     'sphinx.ext.intersphinx',
-    'sphinx.ext.autosectionlabel'
+    'sphinx.ext.autosectionlabel',
+    'sphinxcontrib.bibtex'
 ]
 html_theme = "piccolo_theme"
 linkcheck_ignore = [

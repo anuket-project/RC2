@@ -52,36 +52,31 @@ Traceability Matrix
 Kubernetes API testing
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The primary objectives of the `e2e
-tests <https://github.com/kubernetes/community/blob/master/contributors/devel/sig-testing/e2e-tests.md>`__
-are to ensure a consistent and reliable behavior of the Kubernetes code
-base, and to catch hard-to-test bugs before users do, when unit and
-integration tests are insufficient. They are partially selected for the
-`Software Conformance Certification
-program <https://github.com/cncf/k8s-conformance>`__ run by the
+The primary objectives of the e2e tests :cite:p:`rc2-kubernetes-e2e-tests` are
+to ensure a consistent and reliable behavior of the Kubernetes code base, and
+to catch hard-to-test bugs before users do, when unit and integration tests are
+insufficient. They are partially selected for the Software Conformance
+Certification program :cite:p:`rc2-kubernetes-conformance` run by the
 Kubernetes community (under the aegis of the CNCF).
 
 Anuket shares the same goal to give end users the confidence that when
 they use a certified product they can rely on a high level of common
-functionality. Then Anuket RC2 starts with the test list defined by `K8s
-Conformance <https://github.com/cncf/k8s-conformance>`__ which is
+functionality. Then Anuket RC2 starts with the test list defined by K8s
+Conformance :cite:p:`rc2-kubernetes-conformance` which is
 expected to grow according to the ongoing requirement traceability.
 
-`End-to-End
-Testing <https://github.com/kubernetes/community/blob/master/contributors/devel/sig-testing/e2e-tests.md>`__
-basically asks for focus and skip regexes to select or to exclude
+End-to-End Testing :cite:p:`rc2-kubernetes-e2e-tests` basically asks for focus
+and skip regexes to select or to exclude
 single tests:
 
--  focus basically matches Conformance or `Testing Special Interest
-   Groups <https://github.com/kubernetes/community/blob/master/sig-testing/charter.md>`__
-   in sub-sections below
--  skip excludes the SIG labels listed as optional in
-   :doc:`ref_arch_kubernetes:chapters/chapter06`.
+-  focus basically matches Conformance or Testing Special Interest Groups
+   :cite:p:`rc2-kubernetes-sig-testing` in sub-sections below
+-  skip excludes the SIG labels listed as optional in Chapter 6 of
+   :cite:t:`rc2-ra2`.
 
 The Reference Conformance suites must be stable and executed on real
 deployments. Then all the following labels are defacto skipped in
-`End-to-End
-Testing <https://github.com/kubernetes/community/blob/master/contributors/devel/sig-testing/e2e-tests.md>`__:
+End-to-End Testing :cite:p:`rc2-kubernetes-e2e-tests`:
 
 -  alpha
 -  Disruptive
@@ -93,11 +88,10 @@ Conformance as per the rules.
 Conformance
 ^^^^^^^^^^^
 
-It must be noted that the default `K8s
-Conformance <https://github.com/cncf/k8s-conformance>`__ testing is
-disruptive thus Anuket RC2 rather picks
-`non-disruptive-conformance <https://sonobuoy.io/docs/main/e2eplugin/>`__
-testing as defined by `Sonobuoy <https://sonobuoy.io/>`__.
+It must be noted that the default K8s Conformance
+:cite:p:`rc2-kubernetes-conformance` testing is disruptive thus Anuket RC2
+rather picks non-disruptive-conformance :cite:p:`rc2-sonobuoy-e2eplugin`
+testing as defined by Sonobuoy :cite:p:`rc2-sonobuoy`.
 
 focus: `Conformance <#conformance>`__
 
@@ -120,9 +114,8 @@ skip:
 -  [Feature:CustomResourceValidationExpressions]
 -  [Feature:StorageVersionAPI]
 
-See `API Machinery Special Interest
-Group <https://github.com/kubernetes/community/tree/master/sig-api-machinery>`__
-and :doc:`ref_arch_kubernetes:chapters/chapter06` for more details.
+See :cite:t:`rc2-k8s-api-sig-api-machinery` and Chapter 6 of :cite:t:`rc2-ra2`
+for more details.
 
 Apps Testing
 ^^^^^^^^^^^^
@@ -141,9 +134,8 @@ skip:
 -  [Feature:StatefulUpgrade]
 -  [Feature:SuspendJob]
 
-See `Apps Special Interest
-Group <https://github.com/kubernetes/community/tree/master/sig-apps>`__
-and :doc:`ref_arch_kubernetes:chapters/chapter06` for more details.
+See :cite:t:`rc2-k8s-api-sig-apps` and Chapter 6 of :cite:t:`rc2-ra2` for more
+details.
 
 Auth Testing
 ^^^^^^^^^^^^
@@ -158,9 +150,8 @@ skip:
 -  [Feature:BoundServiceAccountTokenVolume]
 -  [Feature:PodSecurityPolicy]
 
-See `Auth Special Interest
-Group <https://github.com/kubernetes/community/tree/master/sig-auth>`__
-and :doc:`ref_arch_kubernetes:chapters/chapter06` for more details.
+See :cite:t:`rc2-k8s-api-sig-auth` and Chapter 6 of :cite:t:`rc2-ra2` for more
+details.
 
 Cluster Lifecycle Testing
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -173,9 +164,8 @@ skip:
 -  [Disruptive]
 -  [Flaky]
 
-See `Cluster Lifecycle Special Interest
-Group <https://github.com/kubernetes/community/tree/master/sig-cluster-lifecycle>`__
-and :doc:`ref_arch_kubernetes:chapters/chapter06` for more details.
+See :cite:t:`rc2-k8s-api-sig-cluster-lifecycle` and Chapter 6 of
+:cite:t:`rc2-ra2` for more details.
 
 Instrumentation Testing
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -194,9 +184,8 @@ skip:
 -  [Feature:StackdriverMetadataAgent]
 -  [Feature:StackdriverMonitoring]
 
-See `Instrumentation Special Interest
-Group <https://github.com/kubernetes/community/tree/master/sig-instrumentation>`__
-and :doc:`ref_arch_kubernetes:chapters/chapter06` for more details.
+See :cite:t:`rc2-k8s-api-sig-instrumentation` and Chapter 6 of
+:cite:t:`rc2-ra2` for more details.
 
 Network Testing
 ^^^^^^^^^^^^^^^
